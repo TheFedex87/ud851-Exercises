@@ -27,7 +27,7 @@ import com.example.android.todolist.MainActivity;
 // TODO (1) Verify that TaskContentProvider extends from ContentProvider and implements required methods
 public class TaskContentProvider extends ContentProvider {
 
-    public TaskDbHelper mDbHelper;
+    private TaskDbHelper mDbHelper;
     /* onCreate() is where you should initialize anything you’ll need to setup
     your underlying data source.
     In this case, you’re working with a SQLite database, so you’ll need to
@@ -39,7 +39,7 @@ public class TaskContentProvider extends ContentProvider {
         // [Hint] Declare the DbHelper as a global variable
         mDbHelper = new TaskDbHelper(getContext());
 
-        return false;
+        return true;
     }
 
 
